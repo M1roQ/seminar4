@@ -1,0 +1,22 @@
+name: Count Lines in Text Files
+
+on:
+  push:
+    paths:
+      - "*.txt"
+  pull_request:
+    paths:
+      - "*.txt"
+
+jobs:
+  count-lines:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Count lines in .txt files
+      run: |
+        echo "Counting lines in .txt files..."
+        find . -name "*.txt" -exec wc -l {} \;
