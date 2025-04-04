@@ -1,2 +1,3 @@
 I's new feature for 1.1
-Update feature2
+First update feature2
+Second update feature2
